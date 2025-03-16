@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- mybaits的主配置文件-->
+<configuration>
+    <!-- 配置環境-->
+    <environments default="mysql">
+        <!-- 配置 mysql 環境-->
+        <environment id="mysql">
+            <!-- 配置 事務的類型-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!-- 配置 數據源(連接池)-->
+            <dataSource type="POOLED">
+                <!-- 配置連接數據庫的4個基本訊息-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/new1"/>
+                <property name="username" value="root"/>
+                <property name="password" value="Yb521062"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- 指定映射配置文件的位置，映射配置文件指的是每個dao獨立的配置文件-->
+    <mappers>
+        <mapper resource="com/itheima/dao/userDao.xml"/>
+    </mappers>
+</configuration>
