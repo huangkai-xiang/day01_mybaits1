@@ -14,6 +14,7 @@ public class user implements Serializable{
 
     public Integer getId() {
         System.out.println("123");
+        System.out.println("push test");
         return id;
     }
 
