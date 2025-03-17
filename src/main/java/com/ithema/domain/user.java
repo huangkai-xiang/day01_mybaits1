@@ -13,6 +13,7 @@ public class user implements Serializable{
     private Timestamp insert_time;
 
     public Integer getId() {
+        System.out.println("123");
         return id;
     }
 
